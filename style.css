@@ -1,0 +1,238 @@
+canvas{
+    background: rgba(18, 18, 18, 0.913);
+    max-width: 100%;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.scoreBoard{
+    position: fixed;
+    top:5%;
+    left: 5%;
+    font: 600 1.2vmax "Franklin Gothic Mediuml";
+    color: white;
+    display: none;
+}
+
+form{
+    
+    background-color: rgba(63, 63, 63, 0.453);
+    height: 60vh;
+    width: 60vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+
+form > select, form select option {
+    padding: 2vmax;
+    width: 20vw;
+    font-size: 1.4vmax;
+    text-align: center;
+    font-size: 1.4vmax;
+    font-family: cursive;
+    outline: none;
+    transition: all 0.5s;
+    border:none;
+}
+
+form > input{
+    margin: 2vmax;
+    padding: 2vmax;
+    width: 20vw;
+    cursor: pointer;
+    border: none;
+    color: white;
+    transition: all 0.5s;
+    background-color: indianred;
+    font-size: 1.4vmax;
+    font-family: cursive;
+    outline: none;
+}
+
+form > select:hover{
+    box-shadow: 0 0 10px #fff;
+}
+
+form > input:hover{
+    background-color: rgb(194, 29, 92);
+    box-shadow: 0 0 10px #fff;
+}
+
+form p.mobile{
+    position: absolute;
+    top: 5%;
+    left: 4%;
+    color: #fff;
+    line-height: 1.2;
+    font-weight: bold;
+    display: none;
+}
+form p.desktop{
+    position: absolute;
+    top: 5%;
+    left: 4%;
+    color: #fff;
+    line-height: 1.2;
+    font-weight: bold;
+    /* display: none; */
+}
+form p.controls{
+    line-height: 1.2;
+    position: absolute;
+    top: 5%;
+    right: 2%;
+    color: #fff;
+    font-weight: bold;
+    /* display: none; */
+}
+
+.myGame{
+    height: 100vh;
+}
+
+.gameover{
+    background-color: rgb(122,122,122,0.041);
+    border-radius: 5px;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.gameover > button {
+    padding: 1vmax;
+    border: 2px solid #fff;
+    cursor: pointer;
+    width: 10vw;
+    background-color: #fff;
+    font: 900 1.1vmax cursive;
+    transition: all 0.5s;
+}
+
+.gameover > button:hover{
+    background-color: rgb(30, 30, 34);
+    color: #fff;
+    box-shadow: 0 0 10px #fff;
+}
+
+.gameover > div{
+    margin: 2vmax;
+    color: #fff;
+    font: 600 1.2vmax cursive;
+}
+
+.hugeweapon{
+    position: fixed;
+    top: 85%;
+    right: 5%;
+    max-width: 100px;
+    width: 35%;
+    padding: 8px;
+    background-color: black;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 20px;
+    border: 2px solid rgb(115, 255, 1);
+    transition: all 0.2s ease;
+    /* display: none; */
+    /* transform: scale(1); */
+}
+
+.hugeweapon:active{
+    background-color: rgb(115, 255, 1);
+    box-shadow: 0px 0px 10px rgb(115, 255, 1);
+    transform: scale(0.9);
+}
+
+.hugeweapon.avail{
+
+        animation: glow 0.9s infinite linear ;
+    }
+    @keyframes glow {
+        0%{
+               box-shadow: 0px 0px 0px rgb(115, 255, 1);
+               transform: scale(1);
+            }
+            50%{
+                box-shadow: 0px 0px 10px rgb(115, 255, 1);
+                transform: scale(0.9);
+            }
+            100%{
+                box-shadow: 0px 0px 20px rgb(115, 255, 1);
+                transform: scale(1);
+        }
+    }
+
+input[type="button"]{
+    position: fixed;
+    top: 85%;
+    left: 5%;
+    max-width: 150px;
+    width: 45%;
+    padding: 10px;
+    background-color: black;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 20px;
+    border: 2px solid cyan;
+    transition: all 0.2s ease;
+    text-align: center;
+    font-size: 10px;
+    transition: all 0.3s ease;
+    /* display: none; */
+}
+
+input[type="button"]:active{
+    transform: scale(0.9);
+}
+
+input[type="button"].on{
+    background-color: cyan;
+    color: black;
+    box-shadow: 0px 0px 10px cyan;
+}
+
+input[type="button"].popup{
+    animation: pop 0.9s   infinite linear ;
+}
+@keyframes pop {
+    0%{
+           box-shadow: 0px 0px 0px cyan;
+    }
+    50%{
+        box-shadow: 0px 0px 10px cyan;
+    }
+    100%{
+        box-shadow: 0px 0px 20px cyan;
+    }
+}
+
+/* media query */
+@media (width <= 900px) {
+    form p.controls{
+        display: none;
+    }
+    form p.desktop{
+        display: none;
+    }
+
+    form p.mobile{
+        display: block;
+    }
+}

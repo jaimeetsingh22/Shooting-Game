@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game using pure javascript</title>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+      integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!--ye ek animation library hai javascript ke liye-->
+    <script src="./script.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="scoreBoard">score : 0</div>
+    <!-- <audio src="./music/PubgBGM.mp3" autoplay loop controls></audio> -->
+    <form action="" method="get">
+      <p class="mobile">
+        Every Kill : +10
+        <br>
+        Kamehame : -2
+        <br>
+        Mega Attack : -20
+      </p>
+      <p class="desktop">
+        Every Kill : +10
+        <br>
+        Kamehame : -2
+        <br>
+        Mega Attack : -20
+      </p>
+      <p class="controls">
+        Left Click : Light weapon
+        <br>
+        Right Click : Heavy weapon
+        <br>
+        Space Bar : Huge Weapon
+      </p>
+
+      <select name="" id="difficulty">
+        <option value="Easy">Easy</option>
+        <option value="Medium">Medium</option>
+        <option value="Hard">Hard</option>
+        <option value="Insane">Insane</option>
+        <!--yaha value attribute iss option ke dwara jo v value milega submit karne par-->
+      </select>
+      <input type="submit" value="Play" />
+    </form>
+    <div class="myGame">
+      <!-- <canvas></canvas> -->
+    </div>
+      <button class="hugeweapon">Mega Attack</button>
+      <input type="button" value="Kamehame Mode Off" class="Kamehame">
+  </body>
+</html>
